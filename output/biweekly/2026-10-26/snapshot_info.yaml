@@ -1,0 +1,12 @@
+season: 2026
+input_file: output\biweekly\2026-10-26\games_clean.csv
+input_rows: 2595
+series: 1015
+first_series_date: '2026-01-14'
+last_series_date: '2026-10-25'
+created_utc: '2026-10-26T10:55:42+00:00'
+date: '2026-10-26'
+data_cutoff: '2026-10-26'
+raw_file: data\raw\games_2026.csv
+raw_rows: 12102
+compared_with: 2026_pre_worlds

@@ -1,0 +1,10 @@
+# Python caches and the virtual environment
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+
+# Temporary and in-progress files
+output/biweekly/.tmp-*/
+data/raw/*.partial.csv
+cache_golgg/

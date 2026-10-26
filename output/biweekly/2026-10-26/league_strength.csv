@@ -1,0 +1,7 @@
+league,tier,prior_offset,fitted_offset,intl_series,intl_wins,win_rate
+LCK,1,0,57.8,35,26,0.743
+LPL,1,0,-6.7,28,16,0.571
+LEC,2,-100,-58.4,32,18,0.562
+LCS,2,-100,-131.5,23,9,0.391
+LCP,3,-160,-189.3,20,5,0.25
+CBLOL,4,-220,-251.8,14,2,0.143

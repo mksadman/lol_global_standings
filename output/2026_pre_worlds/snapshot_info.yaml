@@ -1,0 +1,7 @@
+season: 2026
+input_file: data/primary_games_2026.csv
+input_rows: 2557
+series: 993
+first_series_date: '2026-01-14'
+last_series_date: '2026-10-10'
+created_utc: '2026-10-26T10:03:53+00:00'

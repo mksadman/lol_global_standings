@@ -1,0 +1,229 @@
+title_event,kind,event_league,status,last_date,team,placement,secured,overridden,played_playoffs,wins,losses,base_points,multiplier,share,age_w,points
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,LOUD,1,,False,True,7,4,300,0.45,1.0,0.523,70.634
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,RED Canids,2,,False,True,7,4,300,0.45,0.6,0.523,42.38
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,FURIA,3,,False,True,8,4,300,0.45,0.4,0.523,28.254
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,LØS,4,,False,True,6,3,300,0.45,0.4,0.523,28.254
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,Leviatan,5,,False,True,5,7,300,0.45,0.2,0.523,14.127
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,Vivo Keyd Stars,6,,False,True,4,6,300,0.45,0.2,0.523,14.127
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,Fluxo W7M,7,,False,False,2,6,300,0.45,0.2,0.523,14.127
+CBLOL Cup,domestic title,CBLOL,final,2026-03-01,paiN Gaming,8,,False,False,2,7,300,0.45,0.2,0.523,14.127
+LCK Cup,domestic title,LCK,final,2026-03-01,Gen.G,1,,False,True,8,0,300,1.0,1.0,0.523,156.964
+LCK Cup,domestic title,LCK,final,2026-03-01,BNK FEARX,2,,False,True,6,4,300,1.0,0.6,0.523,94.179
+LCK Cup,domestic title,LCK,final,2026-03-01,Dplus Kia,3,,False,True,7,4,300,1.0,0.4,0.523,62.786
+LCK Cup,domestic title,LCK,final,2026-03-01,T1,4,,False,True,5,2,300,1.0,0.4,0.523,62.786
+LCK Cup,domestic title,LCK,final,2026-03-01,DN SOOPers,5,,False,True,4,6,300,1.0,0.2,0.523,31.393
+LCK Cup,domestic title,LCK,final,2026-03-01,DRX,6,,False,True,4,6,300,1.0,0.2,0.523,31.393
+LCK Cup,domestic title,LCK,final,2026-03-01,Hanwha Life Esports,7,,False,False,2,3,300,1.0,0.2,0.523,31.393
+LCK Cup,domestic title,LCK,final,2026-03-01,KT Rolster,8,,False,False,2,4,300,1.0,0.2,0.523,31.393
+LCK Cup,domestic title,LCK,final,2026-03-01,Nongshim RedForce,9,,False,False,2,5,300,1.0,0.1,0.523,15.696
+LCK Cup,domestic title,LCK,final,2026-03-01,BRION,10,,False,False,0,6,300,1.0,0.1,0.523,15.696
+LCP Split 1,domestic title,LCP,final,2026-03-01,Team Secret Whales,1,,False,True,9,1,300,0.6,1.0,0.523,94.179
+LCP Split 1,domestic title,LCP,final,2026-03-01,Deep Cross Gaming,2,,False,True,8,3,300,0.6,0.6,0.523,56.507
+LCP Split 1,domestic title,LCP,final,2026-03-01,Fukuoka SoftBank HAWKS gaming,3,,False,True,5,6,300,0.6,0.4,0.523,37.671
+LCP Split 1,domestic title,LCP,final,2026-03-01,Ground Zero Gaming,4,,False,True,5,5,300,0.6,0.4,0.523,37.671
+LCP Split 1,domestic title,LCP,final,2026-03-01,CTBC Flying Oyster,5,,False,True,3,5,300,0.6,0.2,0.523,18.836
+LCP Split 1,domestic title,LCP,final,2026-03-01,GAM Esports,6,,False,True,4,4,300,0.6,0.2,0.523,18.836
+LCP Split 1,domestic title,LCP,final,2026-03-01,MVK Esports,7,,False,False,2,5,300,0.6,0.2,0.523,18.836
+LCP Split 1,domestic title,LCP,final,2026-03-01,DetonatioN FocusMe,8,,False,False,0,7,300,0.6,0.2,0.523,18.836
+LCS Lock-In,domestic title,LCS,final,2026-03-01,LYON (2024 American Team),1,,False,True,5,2,300,0.75,1.0,0.523,117.723
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Cloud9,2,,False,True,5,1,300,0.75,0.6,0.523,70.634
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Sentinels,3,,False,True,3,3,300,0.75,0.4,0.523,47.089
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Team Liquid,4,,False,True,3,3,300,0.75,0.4,0.523,47.089
+LCS Lock-In,domestic title,LCS,final,2026-03-01,FlyQuest,5,,False,True,2,3,300,0.75,0.2,0.523,23.545
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Disguised,6,,False,True,2,3,300,0.75,0.2,0.523,23.545
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Dignitas,7,,False,False,1,3,300,0.75,0.2,0.523,23.545
+LCS Lock-In,domestic title,LCS,final,2026-03-01,Shopify Rebellion,8,,False,False,0,3,300,0.75,0.2,0.523,23.545
+LEC Versus,domestic title,LEC,final,2026-03-01,G2 Esports,1,,False,True,10,5,300,0.75,1.0,0.523,117.723
+LEC Versus,domestic title,LEC,final,2026-03-01,Karmine Corp,2,,False,True,12,5,300,0.75,0.6,0.523,70.634
+LEC Versus,domestic title,LEC,final,2026-03-01,Movistar KOI,3,,False,True,8,7,300,0.75,0.4,0.523,47.089
+LEC Versus,domestic title,LEC,final,2026-03-01,GIANTX,4,,False,True,8,7,300,0.75,0.4,0.523,47.089
+LEC Versus,domestic title,LEC,final,2026-03-01,Natus Vincere,5,,False,True,8,6,300,0.75,0.2,0.523,23.545
+LEC Versus,domestic title,LEC,final,2026-03-01,Team Vitality,5,,False,True,8,6,300,0.75,0.2,0.523,23.545
+LEC Versus,domestic title,LEC,final,2026-03-01,Fnatic,7,,False,True,5,8,300,0.75,0.2,0.523,23.545
+LEC Versus,domestic title,LEC,final,2026-03-01,Team Heretics,7,,False,True,6,7,300,0.75,0.2,0.523,23.545
+LEC Versus,domestic title,LEC,final,2026-03-01,Los Ratones,9,,False,False,5,6,300,0.75,0.1,0.523,11.772
+LEC Versus,domestic title,LEC,final,2026-03-01,Shifters,9,,False,False,5,6,300,0.75,0.1,0.523,11.772
+LEC Versus,domestic title,LEC,final,2026-03-01,SK Gaming,11,,False,False,3,8,300,0.75,0.1,0.523,11.772
+LEC Versus,domestic title,LEC,final,2026-03-01,Karmine Corp Blue,12,,False,False,2,9,300,0.75,0.1,0.523,11.772
+LPL Split 1,domestic title,LPL,final,2026-03-08,Bilibili Gaming,1,,False,True,10,4,300,1.0,1.0,0.542,162.589
+LPL Split 1,domestic title,LPL,final,2026-03-08,JD Gaming,2,,False,True,8,7,300,1.0,0.6,0.542,97.554
+LPL Split 1,domestic title,LPL,final,2026-03-08,Weibo Gaming,3,,False,True,8,7,300,1.0,0.4,0.542,65.036
+LPL Split 1,domestic title,LPL,final,2026-03-08,Anyone's Legend,4,,False,True,10,4,300,1.0,0.4,0.542,65.036
+LPL Split 1,domestic title,LPL,final,2026-03-08,Invictus Gaming,5,,False,True,4,11,300,1.0,0.2,0.542,32.518
+LPL Split 1,domestic title,LPL,final,2026-03-08,Top Esports,6,,False,True,6,8,300,1.0,0.2,0.542,32.518
+LPL Split 1,domestic title,LPL,final,2026-03-08,Ninjas in Pyjamas.CN,7,,False,True,6,4,300,1.0,0.2,0.542,32.518
+LPL Split 1,domestic title,LPL,final,2026-03-08,Team WE,8,,False,True,5,6,300,1.0,0.2,0.542,32.518
+LPL Split 1,domestic title,LPL,final,2026-03-08,LNG Esports,9,,False,False,7,1,300,1.0,0.1,0.542,16.259
+LPL Split 1,domestic title,LPL,final,2026-03-08,EDward Gaming,10,,False,False,4,3,300,1.0,0.1,0.542,16.259
+LPL Split 1,domestic title,LPL,final,2026-03-08,Oh My God,11,,False,False,4,4,300,1.0,0.1,0.542,16.259
+LPL Split 1,domestic title,LPL,final,2026-03-08,LGD Gaming,12,,False,False,2,4,300,1.0,0.1,0.542,16.259
+LPL Split 1,domestic title,LPL,final,2026-03-08,Ultra Prime,13,,False,False,1,5,300,1.0,0.1,0.542,16.259
+LPL Split 1,domestic title,LPL,final,2026-03-08,ThunderTalk Gaming,14,,False,False,0,7,300,1.0,0.1,0.542,16.259
+First Stand 2026,First Stand,INTL,final,2026-03-22,Bilibili Gaming,1,,False,True,4,0,450,1.0,1.0,0.579,260.759
+First Stand 2026,First Stand,INTL,final,2026-03-22,G2 Esports,2,,False,True,3,2,450,1.0,0.6,0.579,156.455
+First Stand 2026,First Stand,INTL,final,2026-03-22,Gen.G,3,,False,True,2,1,450,1.0,0.4,0.579,104.304
+First Stand 2026,First Stand,INTL,final,2026-03-22,JD Gaming,3,,False,True,2,2,450,1.0,0.4,0.579,104.304
+First Stand 2026,First Stand,INTL,final,2026-03-22,BNK FEARX,5,,False,False,1,2,450,1.0,0.2,0.579,52.152
+First Stand 2026,First Stand,INTL,final,2026-03-22,LYON (2024 American Team),5,,False,False,1,2,450,1.0,0.2,0.579,52.152
+First Stand 2026,First Stand,INTL,final,2026-03-22,LOUD,7,,False,False,0,2,450,1.0,0.2,0.579,52.152
+First Stand 2026,First Stand,INTL,final,2026-03-22,Team Secret Whales,7,,False,False,0,2,450,1.0,0.2,0.579,52.152
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,FURIA,1,,False,True,8,2,300,0.45,1.0,0.783,105.71
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,LØS,2,,False,True,8,5,300,0.45,0.6,0.783,63.426
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,RED Canids,3,,False,True,7,3,300,0.45,0.4,0.783,42.284
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,Fluxo W7M,4,,False,True,5,5,300,0.45,0.4,0.783,42.284
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,LOUD,5,,False,True,4,6,300,0.45,0.2,0.783,21.142
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,Vivo Keyd Stars,6,,False,True,4,5,300,0.45,0.2,0.783,21.142
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,Leviatan,7,,False,False,1,6,300,0.45,0.2,0.783,21.142
+CBLOL Split 1,domestic title,CBLOL,final,2026-06-06,paiN Gaming,7,,False,False,1,6,300,0.45,0.2,0.783,21.142
+LCP Split 2,domestic title,LCP,final,2026-06-07,Team Secret Whales,1,,False,True,10,0,300,0.6,1.0,0.786,141.429
+LCP Split 2,domestic title,LCP,final,2026-06-07,Deep Cross Gaming,2,,False,True,6,6,300,0.6,0.6,0.786,84.857
+LCP Split 2,domestic title,LCP,final,2026-06-07,GAM Esports,3,,False,True,7,3,300,0.6,0.4,0.786,56.571
+LCP Split 2,domestic title,LCP,final,2026-06-07,MVK Esports,4,,False,True,6,4,300,0.6,0.4,0.786,56.571
+LCP Split 2,domestic title,LCP,final,2026-06-07,Fukuoka SoftBank HAWKS gaming,5,,False,True,4,4,300,0.6,0.2,0.786,28.286
+LCP Split 2,domestic title,LCP,final,2026-06-07,CTBC Flying Oyster,6,,False,True,2,6,300,0.6,0.2,0.786,28.286
+LCP Split 2,domestic title,LCP,final,2026-06-07,Ground Zero Gaming,7,,False,False,1,6,300,0.6,0.2,0.786,28.286
+LCP Split 2,domestic title,LCP,final,2026-06-07,DetonatioN FocusMe,8,,False,False,0,7,300,0.6,0.2,0.786,28.286
+LEC Spring,domestic title,LEC,final,2026-06-07,G2 Esports,1,,False,True,9,3,300,0.75,1.0,0.786,176.786
+LEC Spring,domestic title,LEC,final,2026-06-07,Karmine Corp,2,,False,True,10,4,300,0.75,0.6,0.786,106.071
+LEC Spring,domestic title,LEC,final,2026-06-07,Movistar KOI,3,,False,True,7,5,300,0.75,0.4,0.786,70.714
+LEC Spring,domestic title,LEC,final,2026-06-07,GIANTX,4,,False,True,6,5,300,0.75,0.4,0.786,70.714
+LEC Spring,domestic title,LEC,final,2026-06-07,Team Vitality,5,,False,True,8,3,300,0.75,0.2,0.786,35.357
+LEC Spring,domestic title,LEC,final,2026-06-07,Natus Vincere,6,,False,True,6,4,300,0.75,0.2,0.786,35.357
+LEC Spring,domestic title,LEC,final,2026-06-07,Fnatic,7,,False,False,3,6,300,0.75,0.2,0.786,35.357
+LEC Spring,domestic title,LEC,final,2026-06-07,SK Gaming,8,,False,False,2,7,300,0.75,0.2,0.786,35.357
+LEC Spring,domestic title,LEC,final,2026-06-07,Shifters,9,,False,False,1,8,300,0.75,0.1,0.786,17.679
+LEC Spring,domestic title,LEC,final,2026-06-07,Team Heretics,9,,False,False,1,8,300,0.75,0.1,0.786,17.679
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,T1,1,,False,True,15,5,300,1.0,1.0,0.804,241.339
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,Gen.G,2,,False,True,15,5,300,1.0,0.6,0.804,144.804
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,Hanwha Life Esports,3,,False,True,16,3,300,1.0,0.4,0.804,96.536
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,KT Rolster,4,,False,True,14,6,300,1.0,0.4,0.804,96.536
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,Dplus Kia,5,,False,True,12,8,300,1.0,0.2,0.804,48.268
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,BRION,6,,False,True,6,13,300,1.0,0.2,0.804,48.268
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,BNK FEARX,7,,False,False,6,12,300,1.0,0.2,0.804,48.268
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,DRX,8,,False,False,5,13,300,1.0,0.2,0.804,48.268
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,Nongshim RedForce,8,,False,False,5,13,300,1.0,0.2,0.804,48.268
+LCK Rounds 1-2,domestic title,LCK,final,2026-06-14,DN SOOPers,10,,False,False,1,17,300,1.0,0.1,0.804,24.134
+LCS Spring,domestic title,LCS,final,2026-06-14,LYON (2024 American Team),1,,False,True,8,2,300,0.75,1.0,0.804,181.004
+LCS Spring,domestic title,LCS,final,2026-06-14,Team Liquid,2,,False,True,8,4,300,0.75,0.6,0.804,108.603
+LCS Spring,domestic title,LCS,final,2026-06-14,Cloud9,3,,False,True,8,2,300,0.75,0.4,0.804,72.402
+LCS Spring,domestic title,LCS,final,2026-06-14,FlyQuest,4,,False,True,5,5,300,0.75,0.4,0.804,72.402
+LCS Spring,domestic title,LCS,final,2026-06-14,Shopify Rebellion,5,,False,True,2,6,300,0.75,0.2,0.804,36.201
+LCS Spring,domestic title,LCS,final,2026-06-14,Sentinels,6,,False,True,3,5,300,0.75,0.2,0.804,36.201
+LCS Spring,domestic title,LCS,final,2026-06-14,Disguised,7,,False,False,2,5,300,0.75,0.2,0.804,36.201
+LCS Spring,domestic title,LCS,final,2026-06-14,Dignitas,8,,False,False,0,7,300,0.75,0.2,0.804,36.201
+LPL Split 2,domestic title,LPL,final,2026-06-14,Bilibili Gaming,1,,False,True,17,3,300,1.0,1.0,0.804,241.339
+LPL Split 2,domestic title,LPL,final,2026-06-14,Top Esports,2,,False,True,11,7,300,1.0,0.6,0.804,144.804
+LPL Split 2,domestic title,LPL,final,2026-06-14,Team WE,3,,False,True,4,15,300,1.0,0.4,0.804,96.536
+LPL Split 2,domestic title,LPL,final,2026-06-14,Anyone's Legend,4,,False,True,10,8,300,1.0,0.4,0.804,96.536
+LPL Split 2,domestic title,LPL,final,2026-06-14,JD Gaming,5,,False,True,10,7,300,1.0,0.2,0.804,48.268
+LPL Split 2,domestic title,LPL,final,2026-06-14,LGD Gaming,6,,False,True,5,4,300,1.0,0.2,0.804,48.268
+LPL Split 2,domestic title,LPL,final,2026-06-14,EDward Gaming,7,,False,True,4,4,300,1.0,0.2,0.804,48.268
+LPL Split 2,domestic title,LPL,final,2026-06-14,ThunderTalk Gaming,8,,False,True,4,4,300,1.0,0.2,0.804,48.268
+LPL Split 2,domestic title,LPL,final,2026-06-14,LNG Esports,9,,False,False,4,2,300,1.0,0.1,0.804,24.134
+LPL Split 2,domestic title,LPL,final,2026-06-14,Ninjas in Pyjamas.CN,10,,False,False,7,8,300,1.0,0.1,0.804,24.134
+LPL Split 2,domestic title,LPL,final,2026-06-14,Ultra Prime,11,,False,False,2,3,300,1.0,0.1,0.804,24.134
+LPL Split 2,domestic title,LPL,final,2026-06-14,Weibo Gaming,11,,False,False,6,9,300,1.0,0.1,0.804,24.134
+LPL Split 2,domestic title,LPL,final,2026-06-14,Invictus Gaming,13,,False,False,5,10,300,1.0,0.1,0.804,24.134
+LPL Split 2,domestic title,LPL,final,2026-06-14,Oh My God,14,,False,False,0,5,300,1.0,0.1,0.804,24.134
+MSI 2026,MSI,INTL,final,2026-07-12,Hanwha Life Esports,1,,False,True,4,1,700,1.0,1.0,0.879,615.625
+MSI 2026,MSI,INTL,final,2026-07-12,Bilibili Gaming,2,,False,True,3,1,700,1.0,0.6,0.879,369.375
+MSI 2026,MSI,INTL,final,2026-07-12,LYON (2024 American Team),3,,False,True,3,2,700,1.0,0.4,0.879,246.25
+MSI 2026,MSI,INTL,final,2026-07-12,G2 Esports,4,,False,True,2,2,700,1.0,0.4,0.879,246.25
+MSI 2026,MSI,INTL,final,2026-07-12,T1,5,,False,True,4,2,700,1.0,0.2,0.879,123.125
+MSI 2026,MSI,INTL,final,2026-07-12,Team Secret Whales,5,,False,True,1,2,700,1.0,0.2,0.879,123.125
+MSI 2026,MSI,INTL,final,2026-07-12,FURIA,7,,False,True,0,2,700,1.0,0.2,0.879,123.125
+MSI 2026,MSI,INTL,final,2026-07-12,Top Esports,8,,False,True,0,2,700,1.0,0.2,0.879,123.125
+MSI 2026,MSI,INTL,final,2026-07-12,Team Liquid,9,,False,False,2,2,700,1.0,0.1,0.879,61.562
+MSI 2026,MSI,INTL,final,2026-07-12,Karmine Corp,10,,False,False,1,2,700,1.0,0.1,0.879,61.562
+MSI 2026,MSI,INTL,final,2026-07-12,Deep Cross Gaming,11,,False,False,0,2,700,1.0,0.1,0.879,61.562
+EWC 2026,EWC,INTL,final,2026-07-19,Dplus Kia,1,,False,True,5,1,550,1.0,1.0,0.898,494.018
+EWC 2026,EWC,INTL,final,2026-07-19,Karmine Corp,2,,False,True,4,2,550,1.0,0.6,0.898,296.411
+EWC 2026,EWC,INTL,final,2026-07-19,T1,3,,False,True,3,3,550,1.0,0.4,0.898,197.607
+EWC 2026,EWC,INTL,final,2026-07-19,Gen.G,4,,False,True,4,1,550,1.0,0.4,0.898,197.607
+EWC 2026,EWC,INTL,final,2026-07-19,Anyone's Legend,5,,False,True,2,1,550,1.0,0.2,0.898,98.804
+EWC 2026,EWC,INTL,final,2026-07-19,Bilibili Gaming,5,,False,True,2,1,550,1.0,0.2,0.898,98.804
+EWC 2026,EWC,INTL,final,2026-07-19,Hanwha Life Esports,5,,False,True,2,1,550,1.0,0.2,0.898,98.804
+EWC 2026,EWC,INTL,final,2026-07-19,JD Gaming,5,,False,True,2,2,550,1.0,0.2,0.898,98.804
+EWC 2026,EWC,INTL,final,2026-07-19,G2 Esports,9,,False,False,1,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,GAM Esports,9,,False,False,1,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,LØS,9,,False,False,1,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,Sentinels,9,,False,False,1,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,FURIA,13,,False,False,0,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,LYON (2024 American Team),13,,False,False,0,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,Movistar KOI,13,,False,False,0,2,550,1.0,0.1,0.898,49.402
+EWC 2026,EWC,INTL,final,2026-07-19,Team Secret Whales,13,,False,False,0,2,550,1.0,0.1,0.898,49.402
+LCP Split 3,season final,LCP,final,2026-08-30,Team Secret Whales,1,,False,True,6,1,400,0.6,1.0,1.0,240.0
+LCP Split 3,season final,LCP,final,2026-08-30,CTBC Flying Oyster,2,,False,True,7,3,400,0.6,0.6,1.0,144.0
+LCP Split 3,season final,LCP,final,2026-08-30,MVK Esports,3,,False,True,4,4,400,0.6,0.4,1.0,96.0
+LCP Split 3,season final,LCP,final,2026-08-30,GAM Esports,4,,False,True,3,4,400,0.6,0.4,1.0,96.0
+LCP Split 3,season final,LCP,final,2026-08-30,Deep Cross Gaming,5,,False,False,2,3,400,0.6,0.2,1.0,48.0
+LCP Split 3,season final,LCP,final,2026-08-30,Ground Zero Gaming,5,,False,False,2,3,400,0.6,0.2,1.0,48.0
+LCP Split 3,season final,LCP,final,2026-08-30,DetonatioN FocusMe,7,,False,False,1,4,400,0.6,0.2,1.0,48.0
+LCP Split 3,season final,LCP,final,2026-08-30,Fukuoka SoftBank HAWKS gaming,8,,False,False,0,3,400,0.6,0.2,1.0,48.0
+LCK Season,season final,LCK,final,2026-09-13,Gen.G,1,,False,True,8,3,400,1.0,1.0,1.0,400.0
+LCK Season,season final,LCK,final,2026-09-13,Hanwha Life Esports,2,,False,True,6,6,400,1.0,0.6,1.0,240.0
+LCK Season,season final,LCK,final,2026-09-13,T1,3,,False,True,5,7,400,1.0,0.4,1.0,160.0
+LCK Season,season final,LCK,final,2026-09-13,Dplus Kia,4,,False,True,8,4,400,1.0,0.4,1.0,160.0
+LCK Season,season final,LCK,final,2026-09-13,KT Rolster,5,,False,True,4,8,400,1.0,0.2,1.0,80.0
+LCK Season,season final,LCK,final,2026-09-13,BNK FEARX,6,,False,True,6,6,400,1.0,0.2,1.0,80.0
+LCK Season,season final,LCK,final,2026-09-13,DN SOOPers,7,,False,False,5,3,400,1.0,0.2,1.0,80.0
+LCK Season,season final,LCK,final,2026-09-13,Nongshim RedForce,8,,False,False,5,4,400,1.0,0.2,1.0,80.0
+LCK Season,season final,LCK,final,2026-09-13,BRION,9,,False,False,4,6,400,1.0,0.1,1.0,40.0
+LCK Season,season final,LCK,final,2026-09-13,DRX,10,,False,False,2,6,400,1.0,0.1,1.0,40.0
+LPL Split 3,season final,LPL,final,2026-09-13,Anyone's Legend,1,,False,True,12,6,400,1.0,1.0,1.0,400.0
+LPL Split 3,season final,LPL,final,2026-09-13,Bilibili Gaming,2,,False,True,14,3,400,1.0,0.6,1.0,240.0
+LPL Split 3,season final,LPL,final,2026-09-13,Invictus Gaming,3,,False,True,8,3,400,1.0,0.4,1.0,160.0
+LPL Split 3,season final,LPL,final,2026-09-13,LGD Gaming,4,,False,True,8,10,400,1.0,0.4,1.0,160.0
+LPL Split 3,season final,LPL,final,2026-09-13,Ninjas in Pyjamas.CN,5,,False,True,8,1,400,1.0,0.2,1.0,80.0
+LPL Split 3,season final,LPL,final,2026-09-13,Team WE,5,,False,True,8,9,400,1.0,0.2,1.0,80.0
+LPL Split 3,season final,LPL,final,2026-09-13,JD Gaming,7,,False,True,8,8,400,1.0,0.2,1.0,80.0
+LPL Split 3,season final,LPL,final,2026-09-13,Top Esports,7,,False,True,9,7,400,1.0,0.2,1.0,80.0
+LPL Split 3,season final,LPL,final,2026-09-13,EDward Gaming,9,,False,True,2,13,400,1.0,0.1,1.0,40.0
+LPL Split 3,season final,LPL,final,2026-09-13,ThunderTalk Gaming,9,,False,True,3,12,400,1.0,0.1,1.0,40.0
+LPL Split 3,season final,LPL,final,2026-09-13,Weibo Gaming,11,,False,False,2,4,400,1.0,0.1,1.0,40.0
+LPL Split 3,season final,LPL,final,2026-09-13,LNG Esports,12,,False,False,0,6,400,1.0,0.1,1.0,40.0
+LEC Summer,season final,LEC,final,2026-09-20,G2 Esports,1,,False,True,9,3,400,0.75,1.0,1.0,300.0
+LEC Summer,season final,LEC,final,2026-09-20,Movistar KOI,2,,False,True,7,6,400,0.75,0.6,1.0,180.0
+LEC Summer,season final,LEC,final,2026-09-20,Karmine Corp,3,,False,True,10,2,400,0.75,0.4,1.0,120.0
+LEC Summer,season final,LEC,final,2026-09-20,Natus Vincere,4,,False,True,6,5,400,0.75,0.4,1.0,120.0
+LEC Summer,season final,LEC,final,2026-09-20,Team Vitality,5,,False,True,7,4,400,0.75,0.2,1.0,60.0
+LEC Summer,season final,LEC,final,2026-09-20,GIANTX,6,,False,True,5,6,400,0.75,0.2,1.0,60.0
+LEC Summer,season final,LEC,final,2026-09-20,Fnatic,7,,False,False,3,6,400,0.75,0.2,1.0,60.0
+LEC Summer,season final,LEC,final,2026-09-20,SK Gaming,7,,False,False,3,6,400,0.75,0.2,1.0,60.0
+LEC Summer,season final,LEC,final,2026-09-20,Team Heretics,9,,False,False,2,7,400,0.75,0.1,1.0,30.0
+LEC Summer,season final,LEC,final,2026-09-20,Shifters,10,,False,False,1,8,400,0.75,0.1,1.0,30.0
+LCS Summer,season final,LCS,final,2026-10-04,Team Liquid,1,,False,True,9,1,400,0.75,1.0,1.0,300.0
+LCS Summer,season final,LCS,final,2026-10-04,LYON (2024 American Team),2,,False,True,8,3,400,0.75,0.6,1.0,180.0
+LCS Summer,season final,LCS,final,2026-10-04,Cloud9,3,,False,True,7,4,400,0.75,0.4,1.0,120.0
+LCS Summer,season final,LCS,final,2026-10-04,Shopify Rebellion,4,,False,True,5,6,400,0.75,0.4,1.0,120.0
+LCS Summer,season final,LCS,final,2026-10-04,FlyQuest,5,,False,True,4,6,400,0.75,0.2,1.0,60.0
+LCS Summer,season final,LCS,final,2026-10-04,Sentinels,6,,False,True,4,5,400,0.75,0.2,1.0,60.0
+LCS Summer,season final,LCS,final,2026-10-04,Disguised,7,,False,False,1,6,400,0.75,0.2,1.0,60.0
+LCS Summer,season final,LCS,final,2026-10-04,Dignitas,8,,False,False,0,7,400,0.75,0.2,1.0,60.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,LØS,1,,False,True,9,1,400,0.45,1.0,1.0,180.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,FURIA,2,,False,True,8,4,400,0.45,0.6,1.0,108.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,LOUD,3,,False,True,7,3,400,0.45,0.4,1.0,72.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,RED Canids,4,,False,True,4,7,400,0.45,0.4,1.0,72.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,paiN Gaming,5,,False,True,3,7,400,0.45,0.2,1.0,36.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,Vivo Keyd Stars,6,,False,True,5,4,400,0.45,0.2,1.0,36.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,Fluxo W7M,7,,False,False,1,6,400,0.45,0.2,1.0,36.0
+CBLOL Split 2,season final,CBLOL,final,2026-10-10,Leviatan,7,,False,False,1,6,400,0.45,0.2,1.0,36.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Anyone's Legend,,participant,False,False,0,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Bilibili Gaming,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,CTBC Flying Oyster,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Cloud9,,participant,False,False,0,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Dplus Kia,,participant,False,False,2,0,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,FURIA,,participant,False,False,1,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,G2 Esports,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Gen.G,,participant,False,False,2,0,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Hanwha Life Esports,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Invictus Gaming,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Karmine Corp,,participant,False,False,4,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,LYON (2024 American Team),,participant,False,False,2,0,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,LØS,,participant,False,False,0,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,MVK Esports,,participant,False,False,2,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Movistar KOI,,participant,False,False,2,0,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,T1,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Team Liquid,,participant,False,False,0,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Team Secret Whales,,participant,False,False,0,2,1000,1.0,0.1,1.0,100.0
+Worlds 2026,Worlds,INTL,in progress,2026-10-25,Top Esports,,participant,False,False,1,1,1000,1.0,0.1,1.0,100.0

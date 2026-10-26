@@ -1,0 +1,377 @@
+season: 2026
+data:
+  output_dir: output
+  raw_dir: data/raw
+team_aliases:
+  HANJIN BRION: BRION
+  Kiwoom DRX: DRX
+  MIBR.LOS: LØS
+  Team Secret (Vietnamese Team): Team Secret Whales
+  AG.AL: Anyone's Legend
+prepare:
+  tournament_level: Primary
+  leagues:
+  - Tencent LoL Pro League
+  - LoL Champions Korea
+  - LoL EMEA Championship
+  - League of Legends Championship Pacific
+  - Circuit Brazilian League of Legends
+  - League of Legends Championship Series
+  - First Stand
+  - Mid-Season Invitational
+  - Esports World Cup
+  - World Championship
+  drop_tournaments: Promotion|Qualifier
+  international_leagues:
+  - First Stand
+  - Mid-Season Invitational
+  - Esports World Cup
+  - World Championship
+  playoff_rules:
+  - stage: ^Play-In
+    value: 0
+  - tournament: Play-In$|Season Play-In
+    value: 0
+  - stage: Group|Swiss|Week|Tiebreak|Seeding|Last Chance
+    value: 0
+  - stage: Playoffs|Finals|Semifinals|Quarterfinals|Bracket|Third-Place|Knight
+    value: 1
+  - tournament: Playoffs|Grand Finals|Road to MSI|Regional Finals
+    value: 1
+  - tournament: ^CBLOL Cup
+    stage: ^Round \d+$
+    value: 1
+  playoff_fallback: 0
+leagues:
+  LCK:
+    name: LoL Champions Korea
+    tier: 1
+  LPL:
+    name: Tencent LoL Pro League
+    tier: 1
+  LEC:
+    name: LoL EMEA Championship
+    tier: 2
+  LCS:
+    name: League of Legends Championship Series
+    tier: 2
+  LCP:
+    name: League of Legends Championship Pacific
+    tier: 3
+  CBLOL:
+    name: Circuit Brazilian League of Legends
+    tier: 4
+tiers:
+  1:
+    domestic_multiplier: 1.0
+    prior_offset: 0
+  2:
+    domestic_multiplier: 0.75
+    prior_offset: -100
+  3:
+    domestic_multiplier: 0.6
+    prior_offset: -160
+  4:
+    domestic_multiplier: 0.45
+    prior_offset: -220
+international_events:
+  worlds:
+    name: World Championship
+    label: Worlds
+    weight: 1.0
+    base_points: 1000
+  msi:
+    name: Mid-Season Invitational
+    label: MSI
+    weight: 0.9
+    base_points: 700
+  ewc:
+    name: Esports World Cup
+    label: EWC
+    weight: 0.8
+    base_points: 550
+  first_stand:
+    name: First Stand
+    label: First Stand
+    weight: 0.7
+    base_points: 450
+domestic:
+  playoff_weight: 0.55
+  regular_weight: 0.4
+  season_final_base_points: 400
+  other_title_base_points: 300
+placement_shares:
+  bands:
+  - - 1
+    - 1.0
+  - - 2
+    - 0.6
+  - - 4
+    - 0.4
+  - - 8
+    - 0.2
+  everyone_else: 0.1
+final_stage: ^Finals$
+in_progress_placements:
+  default:
+  - stage: ^Finals$
+    secured: reached the final
+    share: 0.6
+  - stage: Semifinals
+    secured: top 4
+    share: 0.4
+  - stage: Quarterfinals
+    secured: top 8
+    share: 0.2
+  - stage: .*
+    secured: participant
+    share: 0.1
+age_weight:
+  enabled: true
+  full_weight_days: 60
+  floor: 0.4
+league_strength:
+  enabled: true
+  prior_sd: 75
+  team_term: true
+  team_sd: 75
+  format_weights:
+    bo1: 0.6
+    bo3: 1.0
+    bo5: 1.2
+factors:
+  reference_rank: 5
+  stakes:
+    enabled: true
+    curve: true
+  quality_wins:
+    enabled: true
+    curve: true
+    best_n: 10
+  network:
+    enabled: true
+    curve: false
+    best_n: 10
+    age_weighted: true
+  international:
+    enabled: true
+    curve: false
+    best_n: 5
+seed_range:
+  low: 1450
+  high: 1550
+elo:
+  base_k: 40
+  format_multipliers:
+    bo1: 0.6
+    bo3: 1.0
+    bo5: 1.2
+  format_multiplier_enabled: true
+  international_multiplier: 1.0
+  international_multiplier_enabled: true
+  baseline_start: 1500
+validation:
+  experiment_groups:
+  - international
+  - domestic
+  bootstrap_samples: 2000
+  bootstrap_seed: 7
+  seed_range_sweep:
+  - - 1500
+    - 1500
+  - - 1450
+    - 1550
+  - - 1400
+    - 1600
+  - - 1350
+    - 1650
+  - - 1300
+    - 1700
+  double_counting_seed_ranges:
+  - - 1450
+    - 1550
+  - - 1350
+    - 1650
+  double_counting_multiplier: 1.0
+  international_multiplier_sweep:
+  - 1.0
+  - 1.5
+  - 2.0
+  floor_sweep:
+  - 0.25
+  - 0.4
+  - 0.6
+  compare_standings_seed_ranges:
+  - - 1450
+    - 1550
+  - - 400
+    - 2000
+  compare_standings_top_n: 20
+update:
+  anchor_date: 2026-10-26
+  interval_days: 14
+  dir: biweekly
+  baseline_snapshot: 2026_pre_worlds
+  baseline_games_csv: data/games_2026_pre-worlds.csv
+seasons:
+  2026:
+    games_csv: output\biweekly\2026-10-26\games_clean.csv
+    placements_override_csv: data/placements_override.csv
+    title_events:
+    - name: LCK Cup
+      league: LCK
+      season_final: false
+      tournaments:
+      - LCK Cup 2026
+    - name: LCK Rounds 1-2
+      league: LCK
+      season_final: false
+      tournaments:
+      - LCK 2026 Rounds 1-2
+      - LCK 2026 Road to MSI
+      final_stage: ^Round 4$
+    - name: LCK Season
+      league: LCK
+      season_final: true
+      tournaments:
+      - LCK 2026 Rounds 3-4
+      - LCK 2026 Season Play-In
+      - LCK 2026 Season Playoffs
+    - name: LPL Split 1
+      league: LPL
+      season_final: false
+      tournaments:
+      - LPL 2026 Split 1
+      - LPL 2026 Split 1 Playoffs
+    - name: LPL Split 2
+      league: LPL
+      season_final: false
+      tournaments:
+      - LPL 2026 Split 2
+      - LPL 2026 Split 2 Playoffs
+    - name: LPL Split 3
+      league: LPL
+      season_final: true
+      tournaments:
+      - LPL 2026 Split 3
+      - LPL 2026 Grand Finals
+    - name: LEC Versus
+      league: LEC
+      season_final: false
+      tournaments:
+      - LEC 2026 Versus
+      - LEC 2026 Versus Playoffs
+    - name: LEC Spring
+      league: LEC
+      season_final: false
+      tournaments:
+      - LEC 2026 Spring
+      - LEC 2026 Spring Playoffs
+    - name: LEC Summer
+      league: LEC
+      season_final: true
+      tournaments:
+      - LEC 2026 Summer
+      - LEC 2026 Summer Playoffs
+    - name: LCS Lock-In
+      league: LCS
+      season_final: false
+      tournaments:
+      - LCS 2026 Lock-In
+    - name: LCS Spring
+      league: LCS
+      season_final: false
+      tournaments:
+      - LCS 2026 Spring
+      - LCS 2026 Spring Playoffs
+    - name: LCS Summer
+      league: LCS
+      season_final: true
+      tournaments:
+      - LCS 2026 Summer
+      - LCS 2026 Summer Playoffs
+    - name: LCP Split 1
+      league: LCP
+      season_final: false
+      tournaments:
+      - LCP 2026 Split 1
+      - LCP 2026 Split 1 Playoffs
+    - name: LCP Split 2
+      league: LCP
+      season_final: false
+      tournaments:
+      - LCP 2026 Split 2
+      - LCP 2026 Split 2 Playoffs
+    - name: LCP Split 3
+      league: LCP
+      season_final: true
+      tournaments:
+      - LCP 2026 Split 3
+    - name: CBLOL Cup
+      league: CBLOL
+      season_final: false
+      tournaments:
+      - CBLOL Cup 2026
+    - name: CBLOL Split 1
+      league: CBLOL
+      season_final: false
+      tournaments:
+      - CBLOL 2026 Split 1
+      - CBLOL 2026 Split 1 Playoffs
+    - name: CBLOL Split 2
+      league: CBLOL
+      season_final: true
+      tournaments:
+      - CBLOL 2026 Split 2
+      - CBLOL 2026 Split 2 Playoffs
+    untitled_tournaments:
+    - LPL 2026 Regional Finals
+    relabel_tournaments:
+      LPL 2026 Regional Finals:
+        League: Tencent LoL Pro League
+        Region: China
+    holdouts:
+    - name: MSI
+      group: international
+      cutoff: '2026-06-27'
+      tournaments:
+      - MSI 2026
+    - name: EWC
+      group: international
+      cutoff: '2026-07-15'
+      tournaments:
+      - Esports World Cup 2026
+    - name: LCK playoffs
+      group: domestic
+      tournaments:
+      - LCK 2026 Season Playoffs
+    - name: LPL playoffs
+      group: domestic
+      tournaments:
+      - LPL 2026 Grand Finals
+    - name: LEC playoffs
+      group: domestic
+      tournaments:
+      - LEC 2026 Summer Playoffs
+    - name: LCS playoffs
+      group: domestic
+      tournaments:
+      - LCS 2026 Summer Playoffs
+    - name: LCP playoffs
+      group: domestic
+      tournaments:
+      - LCP 2026 Split 3
+      playoffs_only: true
+    - name: CBLOL playoffs
+      group: domestic
+      tournaments:
+      - CBLOL 2026 Split 2 Playoffs
+    final_test:
+      enabled: false
+      snapshot: 2026_pre_worlds
+      games_csv: data/games_2026_major.csv
+      holdout:
+        name: Worlds
+        group: worlds
+        cutoff: '2026-10-14'
+        event: worlds

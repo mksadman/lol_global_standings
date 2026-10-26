@@ -1,0 +1,14 @@
+# The ranking (main.py, prepare.py, ranking/)
+numpy==2.5.4
+pandas==3.1.0
+PyYAML==6.0.3
+scipy==1.18.1
+
+# Tests
+pytest==9.1.1
+
+# Downloading data (fetch_leaguepedia.py, scrape_golgg.py)
+beautifulsoup4==4.15.0
+mwclient==0.11.0
+mwrogue==0.1.5
+requests==2.34.2

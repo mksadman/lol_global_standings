@@ -1,0 +1,219 @@
+# Every tunable number in the model lives here. The code reads this file and holds no magic numbers.
+
+# Which season to run (override with: python main.py --season 2027). Season-specific inputs,
+# title events and holdouts live under `seasons` at the bottom of this file. The season's first
+# date and the age-weight reference date always come from the data, never from here.
+season: 2026
+
+data:
+  output_dir: output            # snapshots go to output/<snapshot>/ and output/biweekly/<date>/
+  raw_dir: data/raw             # scheduled updates read the newest raw Leaguepedia export from here
+
+# Team renames ({Leaguepedia name: our name}), applied to Team1, Team2, WinTeam and LossTeam by
+# prepare.py and again when the model loads data. Add a line whenever a team plays under a new name.
+team_aliases:
+  HANJIN BRION: BRION
+  Kiwoom DRX: DRX
+  MIBR.LOS: LØS
+  Team Secret (Vietnamese Team): Team Secret Whales
+  AG.AL: Anyone's Legend
+
+# prepare.py: how a raw Leaguepedia export becomes the cleaned games file.
+prepare:
+  tournament_level: Primary     # keep only rows with this raw TournamentLevel ...
+  leagues:                      # ... whose League is one of these
+    - Tencent LoL Pro League
+    - LoL Champions Korea
+    - LoL EMEA Championship
+    - League of Legends Championship Pacific
+    - Circuit Brazilian League of Legends
+    - League of Legends Championship Series
+    - First Stand
+    - Mid-Season Invitational
+    - Esports World Cup
+    - World Championship
+  drop_tournaments: "Promotion|Qualifier"   # regex on the tournament name
+  # Output TournamentLevel: International for these leagues (after relabelling), Regional otherwise.
+  international_leagues: [First Stand, Mid-Season Invitational, Esports World Cup, World Championship]
+  # IsPlayoffs: Leaguepedia's value is ignored. Stage = the part of MatchId between the first "_" and
+  # the last "_". Rules are tried in order; the first whose regexes all match (re.search) wins.
+  playoff_rules:
+    - {stage: "^Play-In", value: 0}
+    - {tournament: "Play-In$|Season Play-In", value: 0}
+    - {stage: "Group|Swiss|Week|Tiebreak|Seeding|Last Chance", value: 0}
+    - {stage: "Playoffs|Finals|Semifinals|Quarterfinals|Bracket|Third-Place|Knight", value: 1}
+    - {tournament: "Playoffs|Grand Finals|Road to MSI|Regional Finals", value: 1}
+    - {tournament: "^CBLOL Cup", stage: "^Round \\d+$", value: 1}
+  playoff_fallback: 0           # value when no rule matches; every such (tournament, stage) is reported
+
+# Domestic leagues: short code -> Leaguepedia "League" name and tier.
+leagues:
+  LCK:   {name: "LoL Champions Korea", tier: 1}
+  LPL:   {name: "Tencent LoL Pro League", tier: 1}
+  LEC:   {name: "LoL EMEA Championship", tier: 2}
+  LCS:   {name: "League of Legends Championship Series", tier: 2}
+  LCP:   {name: "League of Legends Championship Pacific", tier: 3}
+  CBLOL: {name: "Circuit Brazilian League of Legends", tier: 4}
+
+# Tier ORDER is fixed (1 strongest). Multiplier scales domestic results; offset is the Stage 1 prior.
+tiers:
+  1: {domestic_multiplier: 1.00, prior_offset: 0}
+  2: {domestic_multiplier: 0.75, prior_offset: -100}
+  3: {domestic_multiplier: 0.60, prior_offset: -160}
+  4: {domestic_multiplier: 0.45, prior_offset: -220}
+
+# International events: key -> Leaguepedia "League" name, event weight, placement base points.
+international_events:
+  worlds:      {name: "World Championship", label: "Worlds", weight: 1.00, base_points: 1000}
+  msi:         {name: "Mid-Season Invitational", label: "MSI", weight: 0.90, base_points: 700}
+  ewc:         {name: "Esports World Cup", label: "EWC", weight: 0.80, base_points: 550}
+  first_stand: {name: "First Stand", label: "First Stand", weight: 0.70, base_points: 450}
+
+domestic:
+  playoff_weight: 0.55          # event weight of a domestic series with IsPlayoffs = 1
+  regular_weight: 0.40          # event weight of any other domestic series
+  season_final_base_points: 400
+  other_title_base_points: 300
+
+# Share of an event's base points by placement: [worst placement in band, share].
+placement_shares:
+  bands: [[1, 1.0], [2, 0.6], [4, 0.4], [8, 0.2]]
+  everyone_else: 0.1
+
+# A title event counts as finished once a playoff series whose stage matches this regex has been
+# played (a title event in the season config can set its own `final_stage`). Unfinished domestic
+# events give no placement points. Unfinished international events use the table below.
+final_stage: "^Finals$"
+
+# International event still in progress: each team gets the share of the best finish it has already
+# secured, from the furthest stage it has played (first matching row wins). Teams already knocked out
+# end up with the same share, because their final placement falls in that band. Winning (1st, 1.0)
+# means the final was played, so the event is finished and the normal placements apply.
+# `default` is used for every international event; add a key such as `worlds:` to override one.
+in_progress_placements:
+  default:
+    - {stage: "^Finals$",        secured: "reached the final", share: 0.6}
+    - {stage: "Semifinals",      secured: "top 4",             share: 0.4}
+    - {stage: "Quarterfinals",   secured: "top 8",             share: 0.2}
+    - {stage: ".*",              secured: "participant",       share: 0.1}   # Play-In, Swiss, groups
+
+# Recency: full weight for the last `full_weight_days`, then a straight line down to `floor`.
+age_weight:
+  enabled: true
+  full_weight_days: 60
+  floor: 0.4
+
+# Stage 1: league strength from international series.
+league_strength:
+  enabled: true                 # false = league offset of 0 added to every starting rating
+  prior_sd: 75                  # SD of the Gaussian prior on each league offset
+  team_term: true               # add one shrunken strength term per team that played internationally
+  team_sd: 75                   # SD of the Gaussian prior (centred on 0) on each team term
+  format_weights: {bo1: 0.6, bo3: 1.0, bo5: 1.2}
+
+# Stage 2: résumé factors.
+factors:
+  reference_rank: 5             # ratios are measured against the team in this place
+  stakes:        {enabled: true, curve: true}
+  quality_wins:  {enabled: true, curve: true,  best_n: 10}
+  network:       {enabled: true, curve: false, best_n: 10, age_weighted: true}
+  international: {enabled: true, curve: false, best_n: 5}
+
+# Seed values are rescaled linearly onto [low, high] before the league offset is added.
+seed_range: {low: 1450, high: 1550}   # chosen in validation; Valve uses 400-2000
+
+# Stage 3: Elo replay.
+elo:
+  base_k: 40
+  format_multipliers: {bo1: 0.6, bo3: 1.0, bo5: 1.2}
+  format_multiplier_enabled: true
+  international_multiplier: 1.0     # used when the two teams come from different leagues (2.0 in the original spec)
+  international_multiplier_enabled: true
+  baseline_start: 1500
+
+# Validation settings shared by every season. The holdouts themselves are listed per season.
+# Every experiment runs at the default settings above, changing one thing at a time.
+validation:
+  experiment_groups: [international, domestic]   # holdout groups used to choose settings
+  bootstrap_samples: 2000
+  bootstrap_seed: 7
+  seed_range_sweep: [[1500, 1500], [1450, 1550], [1400, 1600], [1350, 1650], [1300, 1700]]
+  # Double-counting test: rerun these seed ranges with every domestic multiplier set to this value.
+  double_counting_seed_ranges: [[1450, 1550], [1350, 1650]]
+  double_counting_multiplier: 1.0
+  international_multiplier_sweep: [1.0, 1.5, 2.0]
+  floor_sweep: [0.25, 0.4, 0.6]
+  # Full-season top N printed side by side for these seed ranges (current default vs Valve's range).
+  compare_standings_seed_ranges: [[1450, 1550], [400, 2000]]
+  compare_standings_top_n: 20
+
+# Power ranking updates every two weeks: python main.py --date YYYY-MM-DD
+# Valid dates are anchor_date plus a multiple of interval_days (2026-10-26, 2026-11-09, ...).
+update:
+  anchor_date: 2026-10-26
+  interval_days: 14
+  dir: biweekly                 # snapshots go to output/biweekly/<date>/
+  # The first snapshot is compared with this frozen snapshot; its games file is used to spot new
+  # teams and tournaments. Later updates compare with the previous biweekly snapshot.
+  baseline_snapshot: 2026_pre_worlds
+  baseline_games_csv: data/games_2026_pre-worlds.csv
+
+seasons:
+  2026:
+    games_csv: data/games_2026_pre-worlds.csv   # ranking input: every game before Worlds
+    placements_override_csv: data/placements_override.csv
+
+    # Domestic "title events": tournaments grouped together, placements come from the combined group.
+    # Each international event is automatically its own title event.
+    title_events:
+      - {name: "LCK Cup",            league: LCK, season_final: false, tournaments: ["LCK Cup 2026"]}
+      - {name: "LCK Rounds 1-2",     league: LCK, season_final: false, tournaments: ["LCK 2026 Rounds 1-2", "LCK 2026 Road to MSI"], final_stage: "^Round 4$"}   # Road to MSI's last round
+      - {name: "LCK Season",         league: LCK, season_final: true,  tournaments: ["LCK 2026 Rounds 3-4", "LCK 2026 Season Play-In", "LCK 2026 Season Playoffs"]}
+      - {name: "LPL Split 1",        league: LPL, season_final: false, tournaments: ["LPL 2026 Split 1", "LPL 2026 Split 1 Playoffs"]}
+      - {name: "LPL Split 2",        league: LPL, season_final: false, tournaments: ["LPL 2026 Split 2", "LPL 2026 Split 2 Playoffs"]}
+      - {name: "LPL Split 3",        league: LPL, season_final: true,  tournaments: ["LPL 2026 Split 3", "LPL 2026 Grand Finals"]}
+      - {name: "LEC Versus",         league: LEC, season_final: false, tournaments: ["LEC 2026 Versus", "LEC 2026 Versus Playoffs"]}
+      - {name: "LEC Spring",         league: LEC, season_final: false, tournaments: ["LEC 2026 Spring", "LEC 2026 Spring Playoffs"]}
+      - {name: "LEC Summer",         league: LEC, season_final: true,  tournaments: ["LEC 2026 Summer", "LEC 2026 Summer Playoffs"]}
+      - {name: "LCS Lock-In",        league: LCS, season_final: false, tournaments: ["LCS 2026 Lock-In"]}
+      - {name: "LCS Spring",         league: LCS, season_final: false, tournaments: ["LCS 2026 Spring", "LCS 2026 Spring Playoffs"]}
+      - {name: "LCS Summer",         league: LCS, season_final: true,  tournaments: ["LCS 2026 Summer", "LCS 2026 Summer Playoffs"]}
+      - {name: "LCP Split 1",        league: LCP, season_final: false, tournaments: ["LCP 2026 Split 1", "LCP 2026 Split 1 Playoffs"]}
+      - {name: "LCP Split 2",        league: LCP, season_final: false, tournaments: ["LCP 2026 Split 2", "LCP 2026 Split 2 Playoffs"]}
+      - {name: "LCP Split 3",        league: LCP, season_final: true,  tournaments: ["LCP 2026 Split 3"]}
+      - {name: "CBLOL Cup",          league: CBLOL, season_final: false, tournaments: ["CBLOL Cup 2026"]}
+      - {name: "CBLOL Split 1",      league: CBLOL, season_final: false, tournaments: ["CBLOL 2026 Split 1", "CBLOL 2026 Split 1 Playoffs"]}
+      - {name: "CBLOL Split 2",      league: CBLOL, season_final: true,  tournaments: ["CBLOL 2026 Split 2", "CBLOL 2026 Split 2 Playoffs"]}
+
+    # Domestic tournaments that belong to no title event and give no placement points
+    # (their series still count for Elo and the win-based factors).
+    untitled_tournaments: ["LPL 2026 Regional Finals"]
+
+    # prepare.py: tournaments whose raw fields are wrong. Leaguepedia files the LPL Regional Finals
+    # under "World Championship"; they are LPL playoffs (IsPlayoffs comes from the playoff rules).
+    relabel_tournaments:
+      "LPL 2026 Regional Finals": {League: Tencent LoL Pro League, Region: China}
+
+    # Holdouts: train on series before the cutoff, predict the held-out series with frozen ratings.
+    # A holdout picks its test series by `tournaments` (list) or `event` (international key), optionally
+    # only IsPlayoffs = 1 series. With no `cutoff`, training stops at the first test series' start time.
+    # Title events still being played at the cutoff earn no placement points in that run.
+    holdouts:
+      - {name: MSI, group: international, cutoff: "2026-06-27", tournaments: ["MSI 2026"]}
+      - {name: EWC, group: international, cutoff: "2026-07-15", tournaments: ["Esports World Cup 2026"]}
+      - {name: LCK playoffs,   group: domestic, tournaments: ["LCK 2026 Season Playoffs"]}
+      - {name: LPL playoffs,   group: domestic, tournaments: ["LPL 2026 Grand Finals"]}
+      - {name: LEC playoffs,   group: domestic, tournaments: ["LEC 2026 Summer Playoffs"]}
+      - {name: LCS playoffs,   group: domestic, tournaments: ["LCS 2026 Summer Playoffs"]}
+      - {name: LCP playoffs,   group: domestic, tournaments: ["LCP 2026 Split 3"], playoffs_only: true}
+      - {name: CBLOL playoffs, group: domestic, tournaments: ["CBLOL 2026 Split 2 Playoffs"]}
+
+    # Final untouched test (phase 2). Never used to choose settings. It predicts every Worlds series
+    # (picked by event, so Leaguepedia's tournament names don't matter) with the frozen snapshot's
+    # own config and ratings. Play-In starts 2026-10-15, so the snapshot must end before `cutoff`.
+    # Run with: python main.py --final-test   (only once `enabled` is true and Worlds is in the data)
+    final_test:
+      enabled: false
+      snapshot: 2026_pre_worlds
+      games_csv: data/games_2026_major.csv     # same games plus Worlds; only the final test reads it
+      holdout: {name: Worlds, group: worlds, cutoff: "2026-10-14", event: worlds}
